@@ -21,6 +21,7 @@ router.get("/", async(req, res) => {
     try {
 
         const blogs = await Blog.find();
+        console.log("/ page exists");
         res.send(blogs);
     } catch (err) {
         console.log(err);
